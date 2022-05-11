@@ -54,16 +54,9 @@ struct PaletteManager: View {
             // (not to the NavigationView)
             // (NavigationView looks at the View it is currently showing for toolbar info)
             // (ditto title and titledisplaymode above)
+            .dismissable { presentationMode.wrappedValue.dismiss() }
             .toolbar {
                 ToolbarItem { EditButton() }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    if presentationMode.wrappedValue.isPresented,
-                       UIDevice.current.userInterfaceIdiom != .pad {
-                        Button("Close") {
-                            presentationMode.wrappedValue.dismiss()
-                        }
-                    }
-                }
             }
             // see comment for editMode @State above
             .environment(\.editMode, $editMode)

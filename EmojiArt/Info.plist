@@ -82,6 +82,8 @@
 			</dict>
 		</dict>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera can be used to add a background to the application.</string>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>
